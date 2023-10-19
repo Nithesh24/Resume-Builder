@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "index.css">
+    <script src = "main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form class = "form-container">
+        <label>First Name</label>
+        <input type = "text" id = "first-name" required>
+        <label>Last Name</label>
+        <input type = "text" id = "last-name" required>
+        <label>Word that defines you</label>
+        <input type = "text" id = "defines-you" required>
+        <label>profile picture</label>
+        <input type = "file" id = "image" accept="image/png, image/gif, image/jpeg" required>
+        <h4 style = "margin-top : 1em;">Contact Info</h4>
+        <div id="contact-info">
+            <label>Phone Number</label>
+            <input type = "number" id = "phone-number" size = "10" required>
+            <label>Mail Id</label>
+            <input type = "email" id = "mail" required>
+            <label>Linkdin</label>
+            <input type = "text" id = "linkdin" required>
+            <label>Address</label>
+            <textarea id = "address"  required></textarea>
+        </div>
+
+        <h4>Education</h4>
+        <div id = "education">
+            <div class="education-box">
+                <label>course studied</label>
+                <input type = "text" class = "course" required>
+                <label>College name</label>
+                <input type = "text" class = "college" required>
+                <lable>from</lable>
+                <input type = "month" class = "from" required>
+                <label>to</label>
+                <input type = "month" class = "to" required>
+            </div>
+        </div>
+        <div class = "buttons">
+            <button type = "button" onclick = "add_education()">+</button>
+            <button type = "button" onclick = "pop_education()">-</button>
+        </div>
+
+        <h4>Skills</h4>
+        <div id="skills">
+            <div class="skill-box">
+                <label>name of skill</label>
+                <input type = "text" class = "skill" required>
+            </div>
+        </div>
+        <div class = "buttons">
+            <button type = "button" onclick = "add_skill()">+</button>
+            <button type = "button" onclick = "pop_skill()">-</button>
+        </div>
+        
+        <h4>Profession stuff</h4>
+        <div id="prof">
+            <div class="professional">
+                <label>Position</label>
+                <input type = "text" class = "position" required>
+                <label>Company Name</label>
+                <input type = "text" class = "company" required>
+                <label>about you or company</label>
+                <textarea class = "about" required></textarea>
+                <label>from</label>
+                <input type = "month" class = "prof_from" required>
+                <labe>to</labe>
+                <input type = "month" class = "prof_to" required>
+            </div>
+        </div>
+        <div class = "buttons">
+            <button type = "button" onclick = "add_professional()">+</button>
+            <button type = "button" onclick = "pop_professional()">-</button>
+        </div>
+
+        <h4>Achivements</h4>
+        <div id="achivements">
+            <div class="achivement-box">
+                <label>what u achieved</label>
+            <input type = "text" class = "achivement" required>
+            </div>
+        </div>
+        <div class = "buttons">
+            <button type = "button" onclick = "add_achivement()">+</button>
+            <button type = "button" onclick = "pop_achivement()">-</button>
+        </div>
+
+        <br>
+        <input type = "submit" value = "submit" id = "submit">
+    </form>
+</body>
+</html>

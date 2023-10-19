@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = "file" accept="image/*" id = "image" required>
+    <button onclick = "fun()">submit</button>
+    <img src = "" id = "img">
+</body>
+<script>
+    document.querySelector("#image").addEventListener("change", function(){
+        const reader = new FileReader();
+        reader.readAsDataURL(this.files[0]);
+        reader.addEventListener("load",()=>{
+            console.log(reader.result)
+        })
+    })
+    function fun()
+    {
+        let image = document.querySelector("#image");
+        let img = document.querySelector("#img");
+        console.log(image.files[0]);
+        img.src = image.files[0];
+    }
+</script>
+</html>

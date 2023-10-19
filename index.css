@@ -1,0 +1,150 @@
+*{
+    padding : 0;
+    margin : 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.form-container
+{
+    display : flex;
+    flex-direction : column;
+
+    width : 60%;
+    height : auto;
+
+    margin : 5vh auto;
+
+    border : solid black 2px;
+    padding : 1em;
+    
+    border-radius : 10px;
+}
+
+#contact-info
+{
+    display : flex;
+    flex-direction : column;
+    border : solid 2px black;
+    border-radius : 10px;
+
+    padding : .4em;
+}
+#education
+{
+    transition: transform 300ms ease-out 0ms;
+}
+
+.education-box{
+    display : flex;
+    flex-direction : column;
+
+    border : solid 2px black;
+    border-radius : 10px;
+
+    padding : .4em;
+    margin : .4em 0;
+
+    animation : show_animation 300ms ease-out 0ms forwards;
+}
+
+@keyframes show_animation{
+    0%{
+        transform : scale(.5);
+        opacity : .3;
+    }
+    100%{
+        transform : scale(1);
+        opactiy : 1;
+    }
+}
+
+@keyframes hide_animation{
+    0%{
+        transfrom : scale(1);
+        opacity : 1;
+    }
+    100%{
+        transform : scale(0);
+        opacity : .3;
+    }
+}
+
+.buttons{
+    display : flex;
+    flex-direction : row;
+    justify-content: center;
+    transition: transform 300ms ease-out 0ms;
+}
+.buttons button{
+    width : 4em;
+    height : 2em;
+
+    border-radius : 20px;
+    border : solid black 2px;
+
+    margin : .5em .5em;
+    
+}
+
+#skills{
+    border : solid 2px black;
+    border-radius : 10px;
+
+    padding : .4em;
+    margin : .4em 0;
+
+}
+.skill-box{
+    display : flex;
+    flex-direction : column;
+    
+    animation : show_animation 300ms ease-out 0ms forwards;
+}
+
+.professional{
+    display : flex;
+    flex-direction : column;
+
+    border : solid 2px black;
+    border-radius : 10px;
+
+    padding : .4em;
+    margin : .4em 0;
+
+    animation : show_animation 300ms ease-out 0ms forwards;
+
+}
+
+#achivements{
+    border : solid 2px black;
+    border-radius : 10px;
+
+    padding : .4em;
+    margin : .4em 0;
+}
+.achivement-box{
+    display : flex;
+    flex-direction : column;
+}
+
+#submit{
+    width : fit-content;
+    padding : .6em 3em;
+    border : solid black 2px;
+    border-radius : 20px;
+
+    font-weight: 600;
+    margin : 0 auto;
+}
+
+#submit:hover{
+    background-color : grey;
+    color : white;
+}
+
+
+@media screen and (max-width : 768px) {
+    .form-container{
+        width : 90%;
+    }
+}
